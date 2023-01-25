@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function myFun(){
+var a = document.forms.container;
+for(i=0; i<a.length; i++){
+if(a[i].checked==true)
+return true;
+}
+document.getElementById("message").innerHTML="**please select any one"
+return false;
+}
+</script>
+<h1 style="text-align: center; text-decoration-color: blue; background-color: rgb(89, 51, 114);">CHECK BOX VALIDATION USING JS</h1>
+<P style="text-left"> SELECT WHAT YOU DISLIKE DOING</P>
+<form name="forms" onsubmit="return myFun()" style="text-align:left">
+<input type="checkbox" name="container" id="Good"/> SINGING
+<input type="checkbox" name="container" id="Good"/> DANCING
+<input type="checkbox" name="container" id="Good"/> COOKING
+<input type="checkbox" name="container" id="Good"/> PLAYING
+<input type="checkbox" name="container" id="Good"/> CODING
+<input type="checkbox" name="container" id="Good"/> COOKING <BR><Br></Br></BR>
+<div><p id="message" style="color: red;"></p></div>
+<input type="Submit" value="SUBMIT"/>
+</form>
+</body>
+</html>

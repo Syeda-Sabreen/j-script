@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+function myFun()
+{
+var correct_way = /^[A-Za-z]+$/;
+var a = document.getElementById("User_Name").value;
+
+
+if(a==""){
+document.getElementById("Message").innerHTML="**user name cannot be empty";
+return false;
+}
+
+
+if(a.length<3){
+    document.getElementById("Message").innerHTML="**must include atleast 3 min charecters";
+return false;
+}
+
+if(a.length>20){
+
+    document.getElementById("Message").innerHTML="**username cannot include more than 20 chaecters";
+return false;
+}
+
+if(a.match(correct_way))
+true;
+else{
+document.getElementById("Message").innerHTML="**user name cannot include numbers";
+return false;
+}
+}
+</script>
+
+
+<form style="text-align: center;" onsubmit="return myFun()">
+<label style="background-color: yellowgreen; text-align: center;"> USERNAME</label><BR></BR>
+<input type="text" name="username" id="User_Name">
+<span id="Message"></span><br><br>
+<input style="background-color: blueviolet; text-align: center;" type="Submit" value="Submit">
+</form>
+
+
+</body>
+</html>

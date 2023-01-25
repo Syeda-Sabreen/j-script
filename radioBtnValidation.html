@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function myFun(){
+var a = document.forms.container;
+for(i=0; i<a.length; i++){
+if(a[i].checked==true)
+return true;
+}
+document.getElementById("message").innerHTML="**please select any one"
+return false;
+}
+</script>
+<h1 style="text-align: center; text-decoration-color: blue; background-color: rgb(89, 51, 114);">RADIO BUTTON VALIDATION USING JS</h1>
+<form name="forms" onsubmit="return myFun()" style="text-align: center;">
+<input type="radio" name="container" id="Good"/> GOOD 
+<input type="radio" name="container" id="Good"/> BETTER
+<input type="radio" name="container" id="Good"/> BEST <br><br>
+<div><p id="message" style="color: red;"></p></div>
+
+<input type="Submit" value="SUBMIT"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+    body{
+        height: 90vh;
+        background-color: rgb(255, 0, 0);
+        color: rgb(113, 240, 54);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>        
+    </head>
+<body>
+    <h2>Find Even or Odd number using JS</h2>
+    
+    <labeL> Enter Number</label> <br><br>
+    <input type="number" name="" id="oddeven"
+    onkeyup="isCheck()"> <BR></BR>
+    <span id="message"></span>
+
+    <script>
+
+function isCheck(){
+    var num = document.getElementById('oddeven').value;
+    if((num % 2 )=== 0){
+document.getElementById('message').innerHTML="HURRAY!!" +num+ "is a EVEN  number";
+
+
+    }
+    else{
+        document.getElementById('message').innerHTML="OOPS!!" +num+ "is a ODD  number";
+
+
+    }
+}
+
+    </script>
+
+</body>
+</html>

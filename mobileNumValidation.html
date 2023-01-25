@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function myFun(){
+var a= document.getElementById("mobile_number").value;
+if(a==""){
+    document.getElementById("message").innerHTML="**please fill mobil number";
+    return false;
+}
+
+if(isNaN(a)){
+    document.getElementById("message").innerHTML="**enter only number";
+    return false;
+}
+if(a.length<10){
+    document.getElementById("message").innerHTML="**mobile number must be 10 digit only";
+    return false;
+
+}
+if(a.length>10){
+    document.getElementById("message").innerHTML="**mobile number must be 10 digit only";
+    return false;
+}
+if((a.charAt(0)!=9) && (a.charAt(0)!=8) && (a.charAt(0)!=7)){
+    document.getElementById("message").innerHTML="**mobile number must begin with 9,8 or 7";
+    return false;
+
+}
+
+
+}
+
+
+
+
+</script>
+
+
+
+    <h1 style="text-align: center; text-decoration-color: blueviolet; background-color: brown;">MOBILE NUMBER VALIDATION USING JS</h1>
+    <form onsubmit="return myFun()" style="text-align: center;">
+<label style="background-color: cadetblue; text-align: center; text-decoration-color: black;"> Mobile Number</label>
+<input type="text" id="mobile_number" value=""/>
+<span id="message"></span>
+<input type="Submit" value="Submit"/>
+</form>
+</body>
+</html>
